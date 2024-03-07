@@ -19,3 +19,10 @@
   background-color: #232323;
   color: #fff;
 }
+
+@media only screen and (max-width: 1050px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}

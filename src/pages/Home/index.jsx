@@ -9,6 +9,8 @@ import GreenBullet from "@/assets/images/list-green.png";
 import BlueBullet from "@/assets/images/list-blue.png";
 import EventsCard from "../Events/EventsCard";
 import events from "./events.json";
+import Transitions from "../../components/Transition";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -23,7 +25,7 @@ function Home() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]);
 
   return (
-    <>
+    <Transitions>
       <GridBanner>
         <div className="hero">
           <div className="hero__content">
@@ -38,7 +40,7 @@ function Home() {
             </p>
             <Button text="Learn more" path="/about-us" color="red" />
           </div>
-          <div className="social-icons">
+          <div className="social-icons hero-social-icons ">
             <div
               className="social-icons__icon"
               style={{ backgroundColor: "#f6ba17" }}
@@ -139,45 +141,48 @@ function Home() {
         <div className="whatwedo-section__image"></div>
       </div>
       <div className="events-highlight-section">
-        <div className="events-highlight-section__heading">Highlights</div>
-
-        <div className="events-card-container">
-          <EventsCard
-            title={events.title}
-            date={events.date}
-            description={events.description}
-            image={events.image}
-          />
-          <EventsCard
-            title={events.title}
-            date={events.date}
-            description={events.description}
-            image={events.image}
-          />
-          <EventsCard
-            title={events.title}
-            date={events.date}
-            description={events.description}
-            image={events.image}
-          />
-          <EventsCard
-            title={events.title}
-            date={events.date}
-            description={events.description}
-            image={events.image}
-          />
-          <EventsCard
-            title={events.title}
-            date={events.date}
-            description={events.description}
-            image={events.image}
-          />
-          <div
-            className="events-card"
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <div className="events-card__see-all">
-              <button className="button-outline">See all</button>
+        <div className="events-highlight-section__heading fixed-heading">
+          Highlights
+        </div>
+        <div className="events-scroll-container">
+          <div className="events-card-container">
+            <EventsCard
+              title={events.title}
+              date={events.date}
+              description={events.description}
+              image={events.image}
+            />
+            <EventsCard
+              title={events.title}
+              date={events.date}
+              description={events.description}
+              image={events.image}
+            />
+            <EventsCard
+              title={events.title}
+              date={events.date}
+              description={events.description}
+              image={events.image}
+            />
+            <EventsCard
+              title={events.title}
+              date={events.date}
+              description={events.description}
+              image={events.image}
+            />
+            <EventsCard
+              title={events.title}
+              date={events.date}
+              description={events.description}
+              image={events.image}
+            />
+            <div
+              className="events-card"
+              style={{ display: "flex", height: "490px", alignItems: "center" }}
+            >
+              <div className="events-card__see-all">
+                <button className="button-outline">See all</button>
+              </div>
             </div>
           </div>
         </div>
@@ -187,7 +192,7 @@ function Home() {
           <video autoPlay loop muted src={introVideo} typeof="video/mp4" />
         </div>
       </div>
-    </>
+    </Transitions>
   );
 }
 

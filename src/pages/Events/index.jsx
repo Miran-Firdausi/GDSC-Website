@@ -2,12 +2,15 @@ import GridBanner from "@/components/GridBanner";
 import Heading from "@/components/Heading";
 import EventsCard from "./EventsCard";
 import EventsImage from "@/assets/images/events/gamedev/1.png";
+import illustration from "@/assets/images/events.png";
+import Transitions from "../../components/Transition";
+
 import "./events.css";
 
 function Events() {
   return (
-    <>
-      <GridBanner>
+    <Transitions>
+      <GridBanner mainIllustration={illustration}>
         <div className="banner-content">
           <Heading text="Events" />
         </div>
@@ -60,7 +63,7 @@ function Events() {
           />
         </div>
       </div>
-    </>
+    </Transitions>
   );
 }
 

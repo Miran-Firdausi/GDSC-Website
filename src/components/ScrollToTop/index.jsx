@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./scroll-to-top.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const ScrollTopButton = () => {
   const [showButton, setShowButton] = useState(false);
+
+  const { pathname } = useLocation();
+
+  // Automatically scrolls to top whenever pathname changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,11 +1,13 @@
 import GridBanner from "@/components/GridBanner";
 import Heading from "@/components/Heading";
+import illustration from "@/assets/images/contact-page.png";
+import Transitions from "../../components/Transition";
 import "./contact.css";
 
 function Contact() {
   return (
-    <>
-      <GridBanner>
+    <Transitions>
+      <GridBanner mainIllustration={illustration}>
         <div className="banner-content">
           <Heading text="Contact Us" />
         </div>
@@ -37,7 +39,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </>
+    </Transitions>
   );
 }
 

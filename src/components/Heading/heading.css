@@ -3,6 +3,7 @@
   font-weight: 700;
   text-shadow: -5px 5px 3px #c1c1c1ee;
   transition: all 0.3s;
+  width: 100%;
 }
 
 .heading-text span {

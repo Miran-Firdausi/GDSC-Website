@@ -12,4 +12,26 @@
 
 .about-section__image {
   overflow: hidden;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-section {
+  padding: 0 100px 100px 100px;
+}
+
+.mission-section__description {
+  margin-bottom: 60px;
+}
+
+@media only screen and (max-width: 1050px) {
+  .about-section {
+    border-radius: 40px 40px 0 0;
+  }
+
+  .mission-section {
+    padding: 0 40px 40px 40px;
+  }
 }

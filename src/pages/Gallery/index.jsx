@@ -2,12 +2,15 @@ import ImageCard from "./ImageCard";
 import GridBanner from "@/components/GridBanner";
 import Heading from "@/components/Heading";
 import CardsImage from "@/assets/images/Group-photo.png";
+import illustration from "@/assets/images/gallery.png";
+import Transitions from "../../components/Transition";
+
 import "./gallery.css";
 
 function Gallery({ url }) {
   return (
-    <>
-      <GridBanner>
+    <Transitions>
+      <GridBanner mainIllustration={illustration}>
         <div className="banner-content">
           <Heading text="Gallery" />
         </div>
@@ -26,7 +29,7 @@ function Gallery({ url }) {
           <ImageCard url={CardsImage} />
         </div>
       </div>
-    </>
+    </Transitions>
   );
 }
 

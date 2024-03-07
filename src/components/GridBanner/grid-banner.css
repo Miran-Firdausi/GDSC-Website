@@ -64,11 +64,14 @@
 
 .illustration-bottom-center {
   position: absolute;
-  top: 55vh;
-  height: 45vh;
-  left: 50vw;
+  bottom: -10px;
+  left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+}
+
+.illustration-bottom-center img {
+  max-width: 600px;
 }
 
 @media only screen and (max-width: 1050px) {
@@ -97,7 +100,8 @@
   }
 
   .illustration-bottom-center {
-    position: relative;
+    position: static;
+    transform: none;
   }
 
   .illustration-main {
@@ -109,10 +113,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .illustration-bottom-center {
-    position: relative;
-  }
-
   .illustration-main {
     position: absolute;
     bottom: 0;

@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ProgressBar from "./components/ProgressBar";
 import MouseFollower from "./components/MouseFollower";
 import ScrollTopButton from "./components/ScrollToTop";
+import { AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "About Us", path: "/about-us" },
@@ -22,16 +23,18 @@ function App() {
       <MouseFollower />
       <Navbar links={navLinks} />
       <ToastContainer />
-      <Routes>
-        {routes.map((route) => (
-          <Route
-            exact
-            path={route.path}
-            element={route.render}
-            key={route.lable}
-          />
-        ))}
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes>
+          {routes.map((route) => (
+            <Route
+              exact
+              path={route.path}
+              element={route.render}
+              key={route.lable}
+            />
+          ))}
+        </Routes>
+      </AnimatePresence>
       <ScrollTopButton />
 
       <Footer />
