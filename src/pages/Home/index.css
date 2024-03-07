@@ -277,6 +277,10 @@
     font-size: 16px;
   }
 
+  .hero-social-icons {
+    flex-direction: column;
+  }
+
   .about-section {
     border-radius: 40px 40px 0 0 !important;
   }
