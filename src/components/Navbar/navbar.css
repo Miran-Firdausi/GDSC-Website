@@ -1,0 +1,139 @@
+.navigation {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #ececec;
+  width: 50vw;
+  margin-top: 30px;
+  padding: 15px 0px 12px 0px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.navigation__links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 400;
+  margin-right: 45px;
+  transition: all 1s;
+}
+
+.navigation__link {
+  transition: all 0.3s;
+}
+
+.navigation__link::after {
+  display: block;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: var(--red);
+  border-radius: 5px;
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.navigation__link:hover {
+  color: var(--red);
+}
+
+.navigation__link:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.logo {
+  margin-left: 35px;
+  overflow: hidden;
+  width: 100px;
+}
+
+.logo img:hover {
+  transform: rotate(180deg);
+}
+
+.logo img {
+  height: 30px;
+  transform-origin: center;
+  transition: all 0.3s;
+}
+
+.navigation__hamburger {
+  width: 60px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+  display: none;
+}
+
+.navigation__hamburger-line {
+  height: 4px;
+  background-color: var(--red);
+}
+
+@media only screen and (max-width: 1050px) {
+  .navigation {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .navigation {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .logo {
+    width: 70%;
+    margin: 10px;
+  }
+
+  .navigation__hamburger {
+    display: flex;
+  }
+
+  .navigation__links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    margin: 100px 20px;
+    transform: translateY(-200%);
+  }
+
+  .navigation__link {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .navigation__link:hover::after {
+    width: 100%;
+    opacity: 0;
+  }
+
+  .navigation__link:hover {
+    background-color: var(--green);
+    color: #fff;
+  }
+
+  .navbar-open {
+    display: flex;
+    transform: translateY(0);
+  }
+}

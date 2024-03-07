@@ -1,0 +1,15 @@
+.about-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100vh;
+  border-radius: 90px 90px 0 0;
+  box-shadow: 0 0px 10px 0 #00000040;
+}
+
+.about-section__main {
+  justify-content: space-between;
+}
+
+.about-section__image {
+  overflow: hidden;
+}

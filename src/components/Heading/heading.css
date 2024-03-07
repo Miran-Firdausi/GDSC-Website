@@ -1,0 +1,22 @@
+.heading-text {
+  font-size: 72px;
+  font-weight: 700;
+  text-shadow: -5px 5px 3px #c1c1c1ee;
+  transition: all 0.3s;
+}
+
+.heading-text span {
+  display: inline-block;
+  transition: all 0.3s;
+  overflow: visible;
+}
+
+.heading-text span:hover {
+  transform: translateY(-12px);
+}
+
+@media only screen and (max-width: 1000px) {
+  .heading-text {
+    font-size: 48px;
+  }
+}

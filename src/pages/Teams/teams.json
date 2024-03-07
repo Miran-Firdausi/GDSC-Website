@@ -1,0 +1,25 @@
+{
+    "members": [{
+        "name": "Megha Beria",
+        "Track": "CP"
+    }, {
+        "name": "Uday Badola",
+        "Track": "Podcast"
+    }, 
+    {
+        "name": "Yash Parkhi",
+        "Track": "Game Dev"
+    }, {
+        "name": "Ruhani",
+        "Track": "Design"
+    }, {
+        "name": "Yajushreshtha Shukla",
+        "Track": "CP"
+    }, {
+        "name": "Sumedh Dongre",
+        "Track": "Flutter"
+    }, {
+        "name": "Siddharth Prabhakar",
+        "Track": "Android"
+    }]
+}

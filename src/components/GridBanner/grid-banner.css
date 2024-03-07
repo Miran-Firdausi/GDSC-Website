@@ -1,0 +1,123 @@
+.grid-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background: url("@/assets/images/Grid.svg");
+  background-position: top;
+  background-size: contain;
+  text-align: center;
+  z-index: 0;
+}
+
+.illustrations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.illustrations img {
+}
+
+.illustration-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+}
+
+.illustration-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 160px;
+}
+
+.illustration-center-left {
+  position: absolute;
+  top: 44vh;
+  left: 10%;
+  width: 10%;
+}
+
+.illustration-center-left,
+.illustration-center-right {
+  transition: all 0.3s;
+}
+
+.illustration-center-left:hover,
+.illustration-center-right:hover {
+  scale: 1.2;
+}
+
+.illustration-center-right {
+  position: absolute;
+  top: 56vh;
+  right: 10%;
+  width: 160px;
+}
+
+.illustration-bottom-center {
+  position: absolute;
+  top: 55vh;
+  height: 45vh;
+  left: 50vw;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1050px) {
+  .illustration-top-left {
+    top: 50px;
+    width: 140px;
+  }
+
+  .illustration-top-right {
+    position: absolute;
+    top: 50px;
+    width: 160px;
+  }
+
+  .illustration-center-left {
+    top: 50vh;
+    left: 2vw;
+    width: 150px;
+  }
+
+  .illustration-center-right {
+    position: absolute;
+    top: 44vh;
+    right: 10%;
+    width: 140px;
+  }
+
+  .illustration-bottom-center {
+    position: relative;
+  }
+
+  .illustration-main {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .illustration-bottom-center {
+    position: relative;
+  }
+
+  .illustration-main {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+}

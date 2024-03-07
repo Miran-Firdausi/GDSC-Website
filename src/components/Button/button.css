@@ -1,0 +1,22 @@
+.dashed-button {
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: 2px dashed #ffffff;
+  outline: 6px solid #e54336;
+  font-size: 22px;
+  box-shadow: 2px 2px 5px 0 #000000;
+  transition: all 0.4s;
+}
+
+.dashed-button:hover {
+  transform: rotate(2deg);
+}
+
+@media only screen and (max-width: 1000px) {
+  .dashed-button {
+    font-size: 16px;
+  }
+}
